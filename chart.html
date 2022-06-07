@@ -1,8 +1,6 @@
 <html>
     <head>
-        <style>
-
-        </style>
+        <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         
         <!--일주일간 식사 시간 외의 술 마신 횟수-->
@@ -326,6 +324,7 @@
             }
         </script>
 
+        <!--학사 일정과 음주 주간의 연관성-->
         <script type='text/javascript'>
             google.charts.load('current', {'packages':['annotationchart']});
             google.charts.setOnLoadCallback(drawChart);
@@ -342,36 +341,49 @@
                 data.addColumn('string', 'Schedule title');
                 data.addColumn('string', 'Schedule text');
 
+                data.addColumn('number', 'Club/Major Event');
+                data.addColumn('string', 'Club/Major Event name')
+
                 data.addRows([
                     [ new Date(2022, 3, 1), 0, undefined, undefined,
-                                             0, undefined, undefined],
+                                            0, undefined, undefined,
+                                            0, undefined],
 
                     [ new Date(2022, 3, 10), 18, 'A Week', 'Start week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             1, '개강총회'],
 
                     [ new Date(2022, 3, 17), 10, 'B Week', 'Second week of survey',
-                                             1,  'Mid-Term Week', 'D-7 before Mid-Term test week'],
+                                             1,  'Mid-Term Week', 'D-7 before Mid-Term test week',
+                                             0, undefined],
 
                     [ new Date(2022, 3, 25), 16, 'C Week', 'Third week of survey',
-                                             1,  'Mid-Term Week', 'Start of Mid-Term Test week'],
+                                             1,  'Mid-Term Week', 'Start of Mid-Term Test week',
+                                             0, undefined],
 
                     [ new Date(2022, 4, 1),  23, 'D Week', 'Fourth week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             0, undefined],
 
                     [ new Date(2022, 4, 8),  16, 'E Week', 'Fifth week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             1, '학과 간담회 및 학과 축제'],
 
                     [ new Date(2022, 4, 15), 14, 'F Week', 'Sixth week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             1, '전공박람회'],
 
                     [ new Date(2022, 4, 22), 13, 'G Week', 'Seventh week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             1, 'CODA 정기공연 및 자연과학대학교 축제'],
 
                     [ new Date(2022, 4, 29), 5, 'H Week', 'Eighth week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             0, undefined],
 
                     [ new Date(2022, 5, 5), 14, 'I Week',  'Ninth week of survey',
-                                            1, 'Final-Term Week', 'D-7 before Final Term test'],
+                                            1, 'Final-Term Week', 'D-7 before Final Term test',
+                                            0, undefined],
 
                 ]);
 
@@ -385,10 +397,11 @@
             }
         </script>
 
+        <!--기숙사 통금과 음주 주간의 연관성-->
         <script type='text/javascript'>
             google.charts.load('current', {'packages':['annotationchart']});
             google.charts.setOnLoadCallback(drawChart);
-
+        
             function drawChart() {
                 var data = new google.visualization.DataTable();
                 data.addColumn('date', 'Date');
@@ -400,43 +413,54 @@
                 data.addColumn('number', 'School Schedule');
                 data.addColumn('string', 'Schedule title');
                 data.addColumn('string', 'Schedule text');
-                
-                data.addColumn('number', 'Schedule text');
+            
+                data.addColumn('number', 'Club/Major Event');
+                data.addColumn('string', 'Club/Major Event name')
             
                 data.addRows([
                     [ new Date(2022, 3, 1), 0, undefined, undefined,
-                                             0, undefined, undefined],
+                                            0, undefined, undefined,
+                                            0, undefined],
             
                     [ new Date(2022, 3, 10), 18, 'A Week', 'Start week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             1, '개강총회'],
             
                     [ new Date(2022, 3, 17), 10, 'B Week', 'Second week of survey',
-                                             1,  'Mid-Term Week', 'D-7 before Mid-Term test week'],
+                                             1,  'Mid-Term Week', 'D-7 before Mid-Term test week',
+                                             0, undefined],
             
                     [ new Date(2022, 3, 25), 16, 'C Week', 'Third week of survey',
-                                             1,  'Mid-Term Week', 'Start of Mid-Term Test week'],
+                                             1,  'Mid-Term Week', 'Start of Mid-Term Test week',
+                                             0, undefined],
             
                     [ new Date(2022, 4, 1),  23, 'D Week', 'Fourth week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             0, undefined],
             
                     [ new Date(2022, 4, 8),  16, 'E Week', 'Fifth week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             1, '학과 간담회 및 학과 축제'],
             
                     [ new Date(2022, 4, 15), 14, 'F Week', 'Sixth week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             1, '전공박람회'],
             
                     [ new Date(2022, 4, 22), 13, 'G Week', 'Seventh week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             1, 'CODA 정기공연 및 자연과학대학교 축제'],
             
                     [ new Date(2022, 4, 29), 5, 'H Week', 'Eighth week of survey',
-                                             0, undefined, undefined],
+                                             0, undefined, undefined,
+                                             0, undefined],
             
                     [ new Date(2022, 5, 5), 14, 'I Week',  'Ninth week of survey',
-                                            1, 'Final-Term Week', 'D-7 before Final Term test'],
+                                            1, 'Final-Term Week', 'D-7 before Final Term test',
+                                            0, undefined],
             
                 ]);
             
-                var chart = new google.visualization.AnnotationChart(document.getElementById('dorm_with_drunk'));
+                var chart = new google.visualization.AnnotationChart(document.getElementById('schedule_with_drunk'));
             
                 var options = {
                   displayAnnotations: true
@@ -445,12 +469,57 @@
                 chart.draw(data, options);
             }
         </script>
+
+        <!--기숙사 통금과 술의 연관성-->
+        <script type="text/javascript">
+            google.charts.load("current", {package:["corechart"]});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Bool', 'Count'],
+                    ['그렇다', 14],
+                    ['아니다', 19]
+                ]);
+
+                var options = {
+                    title: "기숙사 통금에 제때 들어가지 못한 것은 술로 인한 것이다.",
+                    is3D: true
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                chart.draw(data, options);
+            }
+        </script>
+
+        <!--기숙사-->
+        <script type="text/javascript">
+            google.charts.load("current", {package:["corechart"]});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Bool', 'Count'],
+                    ['그렇다', 14],
+                    ['아니다', 19]
+                ]);
+            
+                var options = {
+                    title: "기숙사 통금에 제때 들어가지 못한 것은 술로 인한 것이다.",
+                    is3D: true
+                };
+            
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                chart.draw(data, options);
+            }
+        </script>
     </head>
     <body>
         <div id="week_drunk" style="width: 1200px; height: 240px;"></div>
         <div id="week_appo" style="width: 1200px; height: 240px;"></div>
         <div id="week_a_day" style="width: 1200px; height: 240px;"></div>
+
+        <h2>학사 일정과 음주 주간의 연관성 확인</h2>
         <div id="schedule_with_drunk" style="width: 900px; height: 600px;"></div>
 
+        <div id="piechart_3d" style="width: 500px; height: 400px;"></div>
     </body>
 </html> 
